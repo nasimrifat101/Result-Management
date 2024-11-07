@@ -25,25 +25,25 @@ const Dashboard = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink className="text-lg" to="/dashboard/attendance">
-                Attendance
+              <NavLink className="text-lg" to="/dashboard/input-marks">
+                Input Marks
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink className="text-lg" to="/dashboard/leave-request">
                 Leave Requests
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink className="text-lg" to="/dashboard/performance">
                 Performance
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink className="text-lg" to="/dashboard/training">
                 Troublesome
               </NavLink>
-            </li>
+            </li> */}
           </ul>
 
           <div className="flex-grow"></div> {/* Spacer to push buttons to the bottom */}

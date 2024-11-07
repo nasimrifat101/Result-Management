@@ -22,7 +22,7 @@ const StudentList = ({ searchTerm }) => {
             <th>Name</th>
             <th>Group</th>
             <th>Batch</th>
-            <th>Average Mark & Grade</th>
+           
             <th>Edit Result</th>
           </tr>
         </thead>
@@ -47,10 +47,7 @@ const StudentList = ({ searchTerm }) => {
               </td>
               <td>{student.group}</td>
               <td>{student.batch}</td>
-              <td className="space-x-10">
-                <span>{student.average}</span>
-                <span>{student.grade}</span>
-              </td>
+             
               <td>
                 <button className="btn btn-outline">Edit</button>
               </td>
