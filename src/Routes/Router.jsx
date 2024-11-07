@@ -4,11 +4,13 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Auth/Login";
 import SeeMyResult from "../Pages/Result/SeeMyResult";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Error from "../Pages/Components/Error";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Error/>,
     children: [
       {
         path: "/",
