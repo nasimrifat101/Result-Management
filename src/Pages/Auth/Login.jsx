@@ -1,8 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Header from "../Components/Header";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate()
+
+  const login = {
+    username: "a",
+    password: "123456",
+  };
+
   const {
     register,
     handleSubmit,
@@ -11,7 +19,10 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
-    // Add login logic here, e.g., sending data to the server
+
+    if (data.username === login.username && data.password === login.password) {
+      navigate("/Dashboard");
+    }
   };
 
   return (
