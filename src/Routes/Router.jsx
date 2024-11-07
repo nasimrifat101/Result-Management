@@ -23,8 +23,22 @@ export const router = createBrowserRouter([
         element: <SeeMyResult />,
       },
       {
-        path: "/Dashboard",
+        path: "/dashboard",
         element: <Dashboard/>,
+        children: [
+          {
+            path: "/dashboard/all-students",
+            element: <div>All Students</div>,
+          },
+          {
+            path: "/dashboard/attendance",
+            element: <div>Attendance</div>,
+          },
+          {
+            path: "/dashboard/leave-request",
+            element: <div>Leave Requests</div>,
+          },
+        ],
       },
     ],
   },

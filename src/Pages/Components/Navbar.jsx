@@ -9,13 +9,6 @@ const Navbar = ({ onSearch }) => {
     onSearch(e.target.value); // Pass search term up to parent component
   };
 
-  const Navlinks = (
-    <>
-      <li>
-        <NavLink to={"/all-students"}>All Students</NavLink>
-      </li>
-    </>
-  );
 
   return (
     <div className="navbar bg-base-200">
@@ -37,18 +30,11 @@ const Navbar = ({ onSearch }) => {
               />
             </svg>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow space-x-5"
-          >
-            {Navlinks}
-          </ul>
+        
         </div>
-        <a className="btn btn-ghost text-xl">CFM</a>
+        <a className="btn btn-ghost text-xl"></a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-4">{Navlinks}</ul>
-      </div>
+     
       <div className="navbar-end space-x-2">
         <label className="input input-bordered flex items-center gap-2">
           <input
@@ -71,7 +57,7 @@ const Navbar = ({ onSearch }) => {
             />
           </svg>
         </label>
-        <a className="btn btn-primary">Add Result</a>
+        <a className="btn btn-primary">Add Student</a>
       </div>
     </div>
   );

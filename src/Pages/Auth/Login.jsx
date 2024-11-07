@@ -21,7 +21,7 @@ const Login = () => {
     console.log("Login Data:", data);
 
     if (data.username === login.username && data.password === login.password) {
-      navigate("/Dashboard");
+      navigate("/dashboard/all-students");
     }
   };
 
