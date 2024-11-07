@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    onSearch(e.target.value); // Pass search term up to parent component
+  };
+
   const Navlinks = (
     <>
       <li>
-        {" "}
         <NavLink to={"/all-students"}>All Students</NavLink>
       </li>
     </>
@@ -44,9 +50,14 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 space-x-4">{Navlinks}</ul>
       </div>
       <div className="navbar-end space-x-2">
-       
         <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search Student" />
+          <input
+            type="text"
+            className="grow"
+            placeholder="Search Student"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
